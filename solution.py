@@ -11,7 +11,6 @@ def solution(x_success: int,
              y_cnt: int) -> bool:
     alpha = 0.05
     stat, pval = proportions_ztest([x_success, y_success], [x_cnt, y_cnt], alternative='smaller')
-    print(pval)
     if pval <= alpha:
         return True
     else:
